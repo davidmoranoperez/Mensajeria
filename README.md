@@ -1,2 +1,2 @@
 # Mensajería
-PWA FullStack(MONGOBD, EXPRESS, NODEJS)
+PWA FullStack (MONGOBD, EXPRESS, NODEJS)
