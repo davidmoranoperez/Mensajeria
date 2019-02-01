@@ -7,7 +7,7 @@
 
 let colecciones = {
     direccion: { provincia: 'string', ciudad: 'string', direccion: 'string', bloque: 'string', puerta: 'string' },
-    paquete: { codigoBarras: 'string', peso: 'string', fragil: 'boolean', embalaje: 'string' }
+    paquete: { codigoBarras: 'string', peso: 'number', fragil: 'boolean', embalaje: 'string' }
 };
 
 let index = `
@@ -19,8 +19,8 @@ let index = `
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
-           <li><b>Artículos</b>: Permite realizar operaciones CRUD sobre los artículos de la BD. </li>
-           <li><b>Clientes</b>: Permite realizar operaciones CRUD sobre los clientes de la BD.</li>
+           <li><b>Direcciones</b>: Permite realizar operaciones CRUD sobre las direcciones de la BD. </li>
+           <li><b>Paquetes</b>: Permite realizar operaciones CRUD sobre los paquetes de la BD.</li>
          </ul>
      </div>`;
 
@@ -175,7 +175,9 @@ function json2table(collection, jsonData, classes) {
 <button class="insertar" title="Insertar" onclick="
     insertar('${collection}',  { 
         ${colNames[0]}: document.getElementById('${collection}.${colNames[0]}').value,
-        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value
+        ${colNames[1]}: document.getElementById('${collection}.${colNames[1]}').value,
+        ${colNames[2]}: document.getElementById('${collection}.${colNames[2]}').value,
+        ${colNames[3]}: document.getElementById('${collection}.${colNames[3]}').value
     }) ">
 <span>✏️</span>
 </button>
@@ -185,7 +187,9 @@ function json2table(collection, jsonData, classes) {
 <button class="modificar" title="Modificar" onclick="
     modificar ('${collection}', '${fila._id}', {
         ${colNames[0]}: document.getElementById('${fila._id}.${colNames[0]}').value, 
-        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value 
+        ${colNames[1]}: document.getElementById('${fila._id}.${colNames[1]}').value,
+        ${colNames[2]}: document.getElementById('${fila._id}.${colNames[2]}').value,
+        ${colNames[3]}: document.getElementById('${fila._id}.${colNames[3]}').value 
     }) ">
 <span>📝</span>
 </button>
@@ -265,7 +269,7 @@ function sort(ascending, columnClassName, tableId) {
             let nextRow = rows[r + 1];
             let value = row.getElementsByClassName(columnClassName)[0].childNodes[1].value;
             let nextValue = nextRow.getElementsByClassName(columnClassName)[0].childNodes[1].value;
-            value = value.replace(',', ''); // in case a comma is used in float number
+            value = value.replace(',', ' '); // in case a comma is used in float number
             nextValue = nextValue.replace(',', '');
             if (!isNaN(value)) {
                 value = parseFloat(value);

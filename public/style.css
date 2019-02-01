@@ -194,12 +194,12 @@ label#menu-inicio-label > span::after {
   content: " Inicio"; 
 }
 
-label#menu-articulos-label > span::after {
-  content: " Artículos"; 
+label#menu-direcciones-label > span::after {
+  content: " Direcciones"; 
 }
 
-label#menu-clientes-label > span::after {
-  content: " Clientes"; 
+label#menu-paquetes-label > span::after {
+  content: " Paquetes"; 
 }
 
 
@@ -275,10 +275,10 @@ DISEÑO DE TABLAS ADAPTATIVO
   padding: 4px 8px;
 }
 
-.sort-table th.articulos-nombre,
-.sort-table th.articulos-precio,
-.sort-table th.clientes-nombre,
-.sort-table th.clientes-apellidos
+.sort-table th.direcciones-nombre,
+.sort-table th.direcciones-precio,
+.sort-table th.paquetes-nombre,
+.sort-table th.paquetes-apellidos
  {
   width: 30% !important;
 }
@@ -287,14 +287,14 @@ DISEÑO DE TABLAS ADAPTATIVO
   width: 40% !important;
 }
 
-.sort-table .articulos-nombre,
-.sort-table .clientes-nombre  
+.sort-table .direcciones-nombre,
+.sort-table .paquetes-nombre  
 {
   font-weight: bold;
 }
 
-.sort-table .articulos-nombre small,
-.sort-table .clientes-nombre small {
+.sort-table .direcciones-nombre small,
+.sort-table .paquetes-nombre small {
   font-weight: normal;
 }
 
@@ -302,8 +302,8 @@ DISEÑO DE TABLAS ADAPTATIVO
 /* Responsive table full */
 @media (max-width: 767px) {
   label#menu-inicio-label    > span::after,
-  label#menu-articulos-label > span::after,
-  label#menu-clientes-label  > span::after 
+  label#menu-direcciones-label > span::after,
+  label#menu-paquetes-label  > span::after 
   {
     content: none; 
   }
@@ -396,29 +396,29 @@ DISEÑO DE TABLAS ADAPTATIVO
     padding: 10px;
   }
 
-  .sort-table th.articulos-nombre,
-  .sort-table th.articulos-precio,
-  .sort-table th.clientes-nombre,
-  .sort-table th.clientes-apellidos,
+  .sort-table th.direcciones-nombre,
+  .sort-table th.direcciones-precio,
+  .sort-table th.paquetes-nombre,
+  .sort-table th.paquetes-apellidos,
   .sort-table th.operacion {
     width: 100px !important;
   }
 
-  .sort-table td.articulos-nombre:before,
-  .sort-table td.clientes-nombre:before
+  .sort-table td.direcciones-nombre:before,
+  .sort-table td.paquetes-nombre:before
   {
     display: none;
   }
 
-  .sort-table td.articulos-nombre,
-  .sort-table td.clientes-nombre
+  .sort-table td.direcciones-nombre,
+  .sort-table td.paquetes-nombre
   {
     letter-spacing: .03em;
     padding-left: 14px;
   }
 
-  .sort-table td.articulos-nombre > input 
-  .sort-table td.clientes-nombre > input
+  .sort-table td.direcciones-nombre > input 
+  .sort-table td.paquetes-nombre > input
   {
     font-weight:bold;
   }
