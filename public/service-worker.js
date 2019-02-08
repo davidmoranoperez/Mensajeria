@@ -3,7 +3,7 @@
 
 
 // Nombre de la caché
-const CACHE_NAME = 'tiendaw-v2';
+const CACHE_NAME = 'mensajeria';
 
 // Archivos necesarios para el funcionamiento offline
 const CACHE_ASSETS = [

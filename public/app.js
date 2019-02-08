@@ -6,8 +6,8 @@
 
 
 let colecciones = {
-    direccion: { provincia: 'string', ciudad: 'string', direccion: 'string', bloque: 'string', puerta: 'string' },
-    paquete: { codigoBarras: 'string', peso: 'number', fragil: 'boolean', embalaje: 'string' }
+    direccions: { provincia: 'string', ciudad: 'string', direccion: 'string', bloque: 'string', puerta: 'string' },
+    paquetes: { codigoBarras: 'string', peso: 'number', fragil: 'boolean', embalaje: 'string' }
 };
 
 let index = `
