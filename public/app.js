@@ -15,7 +15,7 @@ let index = `
          <h1>Tiendaw</h1>
          <small><b>Ejemplo didáctico: PWA y Fullstack MEN (MongoDB + Express + NodeJS) </b></small>
          <br><br>
-         <p>Esta SPA (Single Page Application) ofrece 3 opciones:</p>
+         <p>Esta SPA (Single Page Application) 0,01ofrece 3 opciones:</p>
          <br>
          <ul style="padding-left: 50px">
            <li><b>Inicio</b>: Esta página con información.</li>
