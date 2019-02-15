@@ -56,7 +56,7 @@ router.put('/direcciones/:id', (req,res)=>{
                 ciudad: req.body.ciudad, 
                 direccion: req.body.direccion, 
                 bloque: req.body.bloque,  
-                puerta: req.body.provincia}},
+                puerta: req.body.puerta}},
         (err,data)=>{
         if(err) res.json({error:err});
         else res.json(data);
@@ -69,7 +69,8 @@ router.put('/paquetes/:id', (req,res)=>{
         {$set: {codigoBarras: req.body.codigoBarras,
                 peso: req.body.peso,
                 fragil: req.body.fragil,
-                embalaje: req.body.codigoBarras}},
+                embalaje: req.body.embalaje,
+                tipo: req.body.tipo}},
         (err,data)=>{
         if(err) res.json({error:err});
         else res.json(data);
@@ -83,7 +84,7 @@ router.post('/direcciones', (req,res)=>{
                 ciudad: req.body.ciudad, 
                 direccion: req.body.direccion, 
                 bloque: req.body.bloque,  
-                puerta: req.body.provincia});
+                puerta: req.body.puerta});
         direccion.save((err,data)=>{
             if(err) res.json({error:err});
             else res.json(data);
@@ -95,7 +96,8 @@ router.post('/paquetes', (req,res)=>{
                 codigoBarras: req.body.codigoBarras,
                 peso: req.body.peso,
                 fragil: req.body.fragil,
-                embalaje: req.body.codigoBarras});
+                embalaje: req.body.embalaje,
+                tipo: req.body.tipo});
         paquete.save((err,data)=>{
             if(err) res.json({error:err});
             else res.json(data);

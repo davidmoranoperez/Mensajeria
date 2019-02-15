@@ -12,7 +12,8 @@ const Paquete = mongoose.model('Paquete',{
     codigoBarras: String,
     peso: Number,
     fragil: Boolean,
-    embalaje: String
+    embalaje: String,
+    tipo: String
 });
 
 module.exports = {
