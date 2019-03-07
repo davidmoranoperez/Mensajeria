@@ -8,7 +8,7 @@ const config = require('./config');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/mensajeria',{useNewUrlParser:true})
+mongoose.connect(config.db_uri,{useNewUrlParser:true})
 .then(db => console.log('Conexión correcta a la BD'))
 .catch(err => console.log('Error en la conexión a la BD'));
 
@@ -22,4 +22,4 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(morgan('dev'));
 
 // --- PUERTO DE ESCUCHA
-app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
+app.listen(config.port, () => console.log('Servidor iniciado en el puerto 3000'));
